@@ -19,13 +19,13 @@ head(penguins)
 ?penguins
 ```
 
-##Sexual dimorphism
+## Single trait distribution
 
-what traits are sexually dimorphic in the penguins dataset? Is the level of sexual dimorphism the same in all three penguin species?
+Exploring the body mass of the penguins species.
+
+what is the lowest and highest body mass do penguins in this dataset have? Do different species have different body mass? How much do they overlap?
 
 ```{r}
 ggplot(penguins)+
-  geom_point(mapping = aes(x=bill_length_mm, y=bill_depth_mm, colour = sex))+
-  facet_wrap(~species)+
-  theme_get()
+  geom_density(mapping = aes(x=body_mass_g, color=species))
 ```

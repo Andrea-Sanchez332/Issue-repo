@@ -1,0 +1,37 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=TRUE}
+install.packages("palmerpenguins")
+library (palmerpenguins)
+library(tidyverse)
+
+View(penguins)
+dim(penguins)
+ncol(penguins)
+head(penguins)
+?penguins
+```
+
+what is the relationship between body mass and flipper length in penguins in this dataset? Does this relationship differ between species? 
+
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species))+
+  theme_classic()
+```
+
+Given the same body mass, which species of penguins tend to have the longest flippers?
+
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species))+
+ geom_smooth(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species), method = 'lm')+
+  theme_classic()
+```
