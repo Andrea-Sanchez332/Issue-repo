@@ -29,16 +29,67 @@ install.packages("palmerpenguins")
 library (palmerpenguins)
 library(tidyverse)
 
+View(penguins)
+dim(penguins)
+ncol(penguins)
+head(penguins)
+?penguins
 ```
-
-
 
 ## Single trait distribution
 
+Exploring the body mass of the penguins species.
 
+what is the lowest and highest body mass do penguins in this dataset have? Do different species have different body mass? How much do they overlap?
+
+```{r}
+ggplot(penguins)+
+  geom_density(mapping = aes(x=body_mass_g, color=species))
+```
+what is the lowest and highest bill lengths do penguins in this dataset have? Do different species have different bill lengths? How much do they overlap?
+
+```{r}
+ggplot(penguins)+
+  geom_density(mapping = aes(x=bill_length_mm, fill=species), alpha=0.5)
+```
 
 ## Relationship between multiple traits
 
+what is the relationship between body mass and flipper length in penguins in this dataset? Does this relationship differ between species? 
 
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species))+
+  theme_classic()
+```
+
+Given the same body mass, which species of penguins tend to have the longest flippers?
+
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species))+
+ geom_smooth(mapping = aes(x=body_mass_g, y=flipper_length_mm, color=species), method = 'lm')+
+  theme_classic()
+```
 
 ##Sexual dimophism
+
+what traits are sexually dimorphic in the penguins dataset? Is the level of sexual dimorphism the same in all three penguin species?
+
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=bill_length_mm, y=bill_depth_mm, colour = sex))+
+  facet_wrap(~species)+
+  theme_get()
+```
+
+##Free exploration
+
+you can look at any temporal trend in the dataset, or patterns within the same species across different islands.
+
+```{r}
+ggplot(penguins)+
+  geom_bar(mapping = aes(x=year, fill= island))+
+  facet_wrap(~species)
+```
+
