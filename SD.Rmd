@@ -1,0 +1,31 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=TRUE}
+install.packages("palmerpenguins")
+library (palmerpenguins)
+library(tidyverse)
+
+View(penguins)
+dim(penguins)
+ncol(penguins)
+head(penguins)
+?penguins
+```
+
+##Sexual dimophism
+
+what traits are sexually dimorphic in the penguins dataset? Is the level of sexual dimorphism the same in all three penguin species?
+
+```{r}
+ggplot(penguins)+
+  geom_point(mapping = aes(x=bill_length_mm, y=bill_depth_mm, colour = sex))+
+  facet_wrap(~species)+
+  theme_get()
+```
