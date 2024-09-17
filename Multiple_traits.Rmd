@@ -5,7 +5,7 @@ output: html_document
 
 
 ```{r, echo=TRUE}
-install.packages("palmerpenguins")
+#install.packages("palmerpenguins")
 library (palmerpenguins)
 library(tidyverse)
 
