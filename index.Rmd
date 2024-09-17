@@ -20,6 +20,6 @@ The `palmerpenguins` data contains size measurements for three penguin species
 
 observed on three islands in the Palmer Archipelago, Antarctica.
 
-![penguins picture](/Users/andreasanchez/Documents/penguins.png) 
+![penguins picture](/Users/andreasanchez/github/penguins/penguins.png) 
 
 This picture was copy and paste from my own directory by clicking in the picture+ control+option+"copy penguins as a pathname"
