@@ -11,7 +11,7 @@
 
 
 
-<title>Sexual Dimorphism</title>
+<title>Penguins</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -342,39 +342,40 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Sexual Dimorphism</h1>
 
 </div>
 
 
-<pre class="r"><code>#install.packages(&quot;palmerpenguins&quot;)
-library (palmerpenguins)
-library(tidyverse)
-
-dim(penguins)</code></pre>
-<pre><code>## [1] 344   8</code></pre>
-<pre class="r"><code>ncol(penguins)</code></pre>
-<pre><code>## [1] 8</code></pre>
-<pre class="r"><code>head(penguins)</code></pre>
-<pre><code>## # A tibble: 6 × 8
-##   species island  bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year
-##   &lt;fct&gt;   &lt;fct&gt;            &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;
-## 1 Adelie  Torger…           39.1          18.7               181        3750 male   2007
-## 2 Adelie  Torger…           39.5          17.4               186        3800 fema…  2007
-## 3 Adelie  Torger…           40.3          18                 195        3250 fema…  2007
-## 4 Adelie  Torger…           NA            NA                  NA          NA &lt;NA&gt;   2007
-## 5 Adelie  Torger…           36.7          19.3               193        3450 fema…  2007
-## 6 Adelie  Torger…           39.3          20.6               190        3650 male   2007</code></pre>
-<p>##Sexual dimorphism</p>
-<p>what traits are sexually dimorphic in the penguins dataset? Is the
-level of sexual dimorphism the same in all three penguin species?</p>
-<pre class="r"><code>ggplot(penguins)+
-  geom_point(mapping = aes(x=bill_length_mm, y=bill_depth_mm, colour = sex))+
-  facet_wrap(~species)+
-  theme_get()</code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale range
-## (`geom_point()`).</code></pre>
-<p><img src="sexual_dimorphism_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="untitled" class="section level1">
+<h1>Untitled</h1>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>Today, we’ll use ggplot to visually explore patterns in morphological
+traits in three</p>
+<p>different species of penguin. This data were collected and made
+available by</p>
+<p>Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, and were
+compiled</p>
+<p>by Dr. Allison Horst and colleagues. <br> The
+<code>palmerpenguins</code> data contains size measurements for three
+penguin species</p>
+<p>observed on three islands in the Palmer Archipelago, Antarctica.</p>
+<figure>
+<img src="/Users/andreasanchez/Documents/penguins.png"
+alt="penguins picture" />
+<figcaption aria-hidden="true">
+penguins picture
+</figcaption>
+</figure>
+</div>
+<div id="single-trait-distribution" class="section level2">
+<h2>Single trait distribution</h2>
+</div>
+<div id="relationship-between-multiple-traits" class="section level2">
+<h2>Relationship between multiple traits</h2>
+<p>##Sexual dimophism</p>
+</div>
+</div>
 
 
 
