@@ -1,19 +1,19 @@
 name: "penguins-website"
 navbar:
   title: "Penguins Website"
-left:
-  - text: "Home"
-href: index.html
-  - text: "Single Trait"
-href: single_trait.html
-- text: "Multiple Traits"
-href: multiple_traits.html
-- text: "Sexual Dimorphism"
-href: sexual_dimorphism.html
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Single Trait"
+      href: single_trait.html
+    - text: "Multiple Traits"
+      href: multiple_traits.html
+    - text: "Sexual Dimorphism"
+      href: sexual_dimorphism.html
 output_dir: "."
 output:
   html_document:
-  theme: cerulean
-highlight: textmate
-toc: true 
-toc_float: true 
+   theme: cerulean
+   highlight: textmate
+   toc: true 
+   toc_float: true 

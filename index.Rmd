@@ -1,7 +1,5 @@
 ---
 title: "Penguins website"
-author: "Andrea"
-date: "2024-09-17"
 output: html_document
 ---
 
