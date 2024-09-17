@@ -33,7 +33,6 @@ View(penguins)
 dim(penguins)
 ncol(penguins)
 head(penguins)
-?penguins
 ```
 
 ## Single trait distribution

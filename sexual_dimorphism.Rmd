@@ -16,7 +16,6 @@ View(penguins)
 dim(penguins)
 ncol(penguins)
 head(penguins)
-?penguins
 ```
 
 ##Sexual dimorphism
